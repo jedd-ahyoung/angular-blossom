@@ -1,4 +1,4 @@
-# angular-seedling — A scalable for AngularJS apps
+# angular-seedling — A scalable skeleton for AngularJS apps
 
 This project modifies the standard angular-seed project into a module pattern in which common 
 functionality is organized by responsibility. This approach sepeartes controllers, services, 
