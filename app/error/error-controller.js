@@ -1,6 +1,6 @@
 'use strict'
 
-Application.Controllers.ErrorController = function($scope){
+Application.Controllers.Error = function($scope){
 	
 	
 }

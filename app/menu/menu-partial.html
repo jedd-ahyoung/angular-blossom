@@ -1,5 +1,4 @@
 
-<ul class="menu">
-	<li><a href="#/view1">view1</a></li>
-	<li><a href="#/view2">view2</a></li>
+<ul class="menu" ng-controller="Application.Controllers.Menu">
+	<li ng-repeat="item in items"><menu-item id="item.id" name="item.name" /></li>
 </ul>

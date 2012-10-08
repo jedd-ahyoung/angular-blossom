@@ -1,6 +1,6 @@
 'use strict'
 
-Application.Controllers.DetailsController = function($scope){
+Application.Controllers.Details = function($scope){
 	
 	
 }
