@@ -19,6 +19,6 @@ angular.module('application', ['application.filters', 'application.services', 'a
     
     $routeProvider.
       when('/about', {templateUrl: 'about/about-partial.html'}).
-      when('/:view/', {templateUrl: 'details/details-partial.html',   controller: Application.Controllers.DetailsController}).
+      when('/:id/', {templateUrl: 'details/details-partial.html',   controller: Application.Controllers.Details}).
       otherwise({templateUrl: '/errors/error-partial.html', controller: Application.Controllers.ErrorController});
   }]);

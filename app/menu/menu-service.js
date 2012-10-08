@@ -21,8 +21,21 @@ Application.Services.factory('menu', function(configuration, $q, $rootScope, $ht
 				$http.get(configuration.ITEMS_URL).
 				  success(function(data, status, headers, config) {
 				    
-				    console.debug(data);
-						deferred.resolve(data);
+				    var result;
+				    
+				    if(id){
+				    
+					    angular.forEach(data, function(obj, index){
+						    if(obj.id === id){
+							    result = obj;
+						    }
+					    });
+					    
+				    }else{
+					    result = data;
+				    }
+				    
+						deferred.resolve(result);
 						
 				  }).
 				  error(function(data, status, headers, config) {				  
@@ -35,6 +48,5 @@ Application.Services.factory('menu', function(configuration, $q, $rootScope, $ht
 				
 				return deferred.promise;
 			},
-		
 	}
 });
