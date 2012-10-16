@@ -16,6 +16,8 @@ proxies = {
   '/': 'http://localhost:8000/'
 };
 
+urlRoot = '/__testacular/';
+
 junitReporter = {
   outputFile: 'test_out/e2e.xml',
   suite: 'e2e'

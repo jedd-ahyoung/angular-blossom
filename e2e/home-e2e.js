@@ -1,9 +1,10 @@
 'use strict'
+
 describe('The home page', function(){
 	
 	beforeEach(function(){
 		
-		return browser().navigateTo('index.html');
+		return browser().navigateTo('/index.html');
 		
 	});
 	
