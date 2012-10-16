@@ -3,14 +3,14 @@ basePath = '../';
 files = [
   ANGULAR_SCENARIO,
   ANGULAR_SCENARIO_ADAPTER,
-  'test/e2e/**/*.js'
+  'e2e/*-e2e.js'
 ];
 
-autoWatch = false;
+autoWatch = true;
 
 browsers = ['Chrome'];
 
-singleRun = true;
+singleRun = false;
 
 proxies = {
   '/': 'http://localhost:8000/'
