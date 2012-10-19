@@ -1,6 +1,6 @@
 'use strict'
 
-Application.Controllers.Details = function(menu, $scope, $routeParams){
+Application.Controllers.controller('details', ['menu', '$scope', '$routeParams', function(menu, $scope, $routeParams){
 	
 	var item, id;
 	
@@ -8,4 +8,4 @@ Application.Controllers.Details = function(menu, $scope, $routeParams){
 		
 	$scope.item = menu.get(id);
 	
-}
+}]);

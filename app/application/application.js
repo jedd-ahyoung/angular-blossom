@@ -7,18 +7,18 @@
 
 var Application = Application || {};
 
-Application.Controllers = Application.Controllers || {};
-
-Application.Filters = angular.module('application.filters', []);
+Application.Constants = angular.module('application.constants', []);
 Application.Services = angular.module('application.services', []);
+Application.Controllers = angular.module('application.controllers', []);
+Application.Filters = angular.module('application.filters', []);
 Application.Directives = angular.module('application.directives', []);
 
 
-angular.module('application', ['application.filters', 'application.services', 'application.directives']).
+angular.module('application', ['application.filters', 'application.services', 'application.directives', 'application.constants', 'application.controllers']).
   config(['$routeProvider', function($routeProvider) {
     
     $routeProvider.
       when('/about', {templateUrl: 'about/about-partial.html'}).
-      when('/:id/', {templateUrl: 'details/details-partial.html',   controller: Application.Controllers.Details}).
-      otherwise({templateUrl: '/error/error-partial.html', controller: Application.Controllers.ErrorController});
+      when('/:id/', {templateUrl: 'details/details-partial.html'}).
+      otherwise({templateUrl: '/error/error-partial.html');
   }]);

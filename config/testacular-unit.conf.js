@@ -8,6 +8,7 @@ files = [
 
   'app/application/application.js',
 
+  'app/*/*-constants.js',
   'app/*/*-service.js',
   'app/*/*-controller.js',
   'app/*/*-filter.js',

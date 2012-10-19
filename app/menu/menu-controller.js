@@ -1,7 +1,7 @@
 'use strict'
 
-Application.Controllers.Menu = function(menu, $scope){
+Application.Controllers.controller('menu', ['menu', '$scope', function(menu, $scope){
 	
 	$scope.items = menu.get();
 	
-}
+}])
