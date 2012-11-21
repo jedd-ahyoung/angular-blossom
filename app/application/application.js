@@ -20,5 +20,5 @@ angular.module('application', ['application.filters', 'application.services', 'a
     $routeProvider.
       when('/about', {templateUrl: 'about/about-partial.html'}).
       when('/:id/', {templateUrl: 'details/details-partial.html'}).
-      otherwise({templateUrl: '/error/error-partial.html'});
+      otherwise({templateUrl: 'error/error-partial.html'});
   }]);
