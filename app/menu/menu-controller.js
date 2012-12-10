@@ -4,4 +4,4 @@ Application.Controllers.controller('menu', ['menu', '$scope', function(menu, $sc
 	
 	$scope.items = menu.get();
 	
-}])
+}]);
