@@ -14,6 +14,7 @@ Application.Directives
 	  		id : '=id',
 	  		name : '=name'
 	  	},
+	  	//TODO: define directive controller.
 	  	link : function(scope, element, attrs) {
 	    },
 	  }
