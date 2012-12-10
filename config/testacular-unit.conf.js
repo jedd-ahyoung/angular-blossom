@@ -13,13 +13,13 @@ files = [
   'app/*/*-controller.js',
   'app/*/*-filter.js',
   'app/*/*-directive.js',
-  'app/*/*-unit.js'
+  'app/*/*-test.js'
 
 ];
 
 autoWatch = true;
 
-browsers = ['Chrome'];
+browsers = ['PhantomJS'];
 
 junitReporter = {
   outputFile: 'test_out/unit.xml',
