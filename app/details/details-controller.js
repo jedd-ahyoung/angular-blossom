@@ -1,11 +1,13 @@
-'use strict'
+(function (window, ng) {
+	'use strict';
 
-Application.Controllers.controller('details', ['menu', '$scope', '$routeParams', function(menu, $scope, $routeParams){
-	
-	var item, id;
-	
-	id = $routeParams.id;
-		
-	$scope.item = menu.get(id);
-	
-}]);
+	var detailsController = function(menu, $scope, $routeParams){
+		menu.get($routeParams.id)
+			.then(function (data) {
+				$scope.item = data;
+			});
+	};
+
+	ng.module('application.controllers')
+		.controller('details', ['menu', '$scope', '$routeParams', detailsController]); 
+})(window, angular);

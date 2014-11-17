@@ -1,11 +1,14 @@
-'use strict'
+(function (window, ng) {
+	'use strict';
 
-/**
-* Defines application-wide key value pairs 
-*/
+	/**
+	* Defines application-wide key value pairs 
+	*/
 
-Application.Constants.constant('configuration', {
+	var configurationConstant = {
+		ITEMS_URL : 'menu/items.json'
+	};
 
-		ITEMS_URL : 'menu/items.json'		
-		
-});
+	ng.module('application.constants')
+		.constant('configuration', configurationConstant);
+})(window, window.angular);
