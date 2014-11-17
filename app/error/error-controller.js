@@ -1,10 +1,9 @@
-(function (window, ng) {
+(function (window, module) {
 	'use strict';
 
 	var errorController = function ($scope) {
 		
 	};
 
-	ng.module('application.controllers')
-		.controller('error', ['$scope', errorController]);
-})(window, window.angular);
+	module.controller('error', ['$scope', errorController]);
+})(window, angular.module('application.controllers'));

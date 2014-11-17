@@ -1,4 +1,4 @@
-(function (window, ng) {
+(function (window, module) {
 	'use strict';
 
 	/**
@@ -9,6 +9,5 @@
 		ITEMS_URL : 'menu/items.json'
 	};
 
-	ng.module('application.constants')
-		.constant('configuration', configurationConstant);
-})(window, window.angular);
+	module.constant('configuration', configurationConstant);
+})(window, angular.module('application.constants'));

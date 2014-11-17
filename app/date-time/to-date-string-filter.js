@@ -1,4 +1,4 @@
-(function (window, ng) {
+(function (window, module) {
 	'use strict';
 
 	/**
@@ -11,14 +11,11 @@
 
 	var toDateStringFilter = function() {
 		return function(timeStamp) {
-			var date;
-
-			date = new Date(parseInt(timeStamp));
+			var date = new Date(parseInt(timeStamp));
 
 			return date.toLocaleDateString();
 		};
 	};
 
-	ng.module('application.filters')
-		.filter('toDateString', toDateStringFilter);
-})(window, window.angular);
+	module.filter('toDateString', toDateStringFilter);
+})(window, angular.module('application.filters'));

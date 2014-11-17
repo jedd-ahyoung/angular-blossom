@@ -1,4 +1,4 @@
-(function (window, ng) {
+(function (window, module) {
 	'use strict';
 
 	/**
@@ -21,6 +21,5 @@
 		};
 	};
 
-	window.Application.Directives = ng.module('application.directives');
-	window.Application.Directives.directive('menuItem', menuItemDirective);
-})(window, window.angular);
+	module.directive('menuItem', menuItemDirective);
+})(window, angular.module('application.directives'));

@@ -1,11 +1,11 @@
-(function (window, ng) {
+(function (window, module, ng) {
 	'use strict';
 
 	/**
 	* Defines the service that performs CRUD operations on menu items
 	*/
 
-	var menuService = function (configuration, $q, $rootScope, $http) { 
+	var menuService = function (configuration, $q, $rootScope, $http, $log) { 
 		return {
 			/**
 			* Retrieves menu Items
@@ -27,7 +27,6 @@
 									result = obj;
 								}
 							});
-							
 						} else {
 							result = data;
 						}
@@ -35,7 +34,7 @@
 						deferred.resolve(result);
 					})
 					.error(function(data, status, headers, config) {  
-						console.error(data, status, headers, config);
+						$log.error(data, status, headers, config);
 						deferred.reject(data);
 					});
 
@@ -44,6 +43,5 @@
 		};
 	};
 
-	ng.module('application.services')
-		.factory('menu', menuService);
-})(window, window.angular);
+	module.factory('menu', menuService);
+})(window, angular.module('application.services'), window.angular);

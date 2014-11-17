@@ -1,4 +1,4 @@
-(function (window, ng) {
+(function (window, module) {
 	'use strict';
 
 	var menuController = function(menu, $scope){
@@ -8,6 +8,5 @@
 			});
 	};
 
-	ng.module('application.controllers')
-		.controller('menu', ['menu', '$scope', menuController]);
-})(window, window.angular);
+	module.controller('menu', ['menu', '$scope', menuController]);
+})(window, angular.module('application.controllers'));

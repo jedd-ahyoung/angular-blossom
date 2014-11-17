@@ -23,5 +23,5 @@
 				.otherwise({templateUrl: 'error/error-partial.html'});
 		}]);
 
-	window.Application = application;
+	// window.Application = application;
 })(window, window.angular);
