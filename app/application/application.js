@@ -6,6 +6,12 @@
 	* creating namespaces and moduled for controllers, filters, services, and directives. 
 	*/
 
+	ng.module('application.filters', []);
+	ng.module('application.services', []);
+	ng.module('application.directives', []);
+	ng.module('application.constants', []);
+	ng.module('application.controllers', []);
+
 	ng.module('application', [
 		'application.filters',
 		'application.services',
