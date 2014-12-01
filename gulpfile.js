@@ -7,6 +7,7 @@ var stylus = require('gulp-stylus');
 var imagemin = require('gulp-imagemin');
 var rm = require('del');
 var browserSync = require('browser-sync');
+var path = require('path');
 
 var paths = {
 	js: ['app/*/*.js', '!app/lib/**'],
@@ -50,7 +51,7 @@ gulp.task('img', function () {
 gulp.task('serve', function () {
 	browserSync({
 		server: {
-			baseDir: '.'
+			baseDir: path.join(__dirname, 'app')
 		}
 	});
 
@@ -66,4 +67,4 @@ gulp.task('watch', function () {
 	gulp.watch([paths.js, paths.index, paths.css], ['build', 'css'])
 });
 
-gulp.task('default', ['build']);
+gulp.task('default', ['serve']);
